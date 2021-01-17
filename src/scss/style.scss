@@ -1,0 +1,193 @@
+@import 'reset';
+
+$white: #FFF;
+$black: #000;
+$red: #C94D35;
+$gray: #878787;
+
+@mixin font($font_name, $file_name, $wight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url('../fonts/#{$file_name}.woff') format('woff'), url('../fonts/#{$file_name}.woff2') format('woff2');
+        font-weight: #{$wight};
+        font-style: #{$style};
+    }
+}
+
+@import 'fonts';
+
+body {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 21px;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+    text-size-adjust: 100%;
+    position: relative;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #FFF;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+button {
+    font-family: 'Futura PT', Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 1;
+}
+
+@media only screen and (max-width:1280px) {
+    h2 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    h2 {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width:550px) {
+    h2 {
+        font-size: 20px;
+    }
+}
+
+main {
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    max-width: 1920px;
+    min-height: 100vh;
+
+    > header,
+    > section,
+    > footer {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    > section {
+        flex: 1;
+    }
+}
+
+@import 'header';
+
+@import 'participate';
+
+@import 'participants';
+
+@import 'pages';
+
+@import 'footer';
+
+.button {
+    min-width: 204px;
+    padding-left: 23px;
+    padding-right: 23px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: $red;
+    color: $white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    user-select: none;  
+}
+
+@media only screen and (max-width:1280px) {
+    .button {
+        min-width: 136px;
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .button {
+        min-width: 106px;
+        height: 30px;
+        font-size: 10px;
+    }
+}
+
+form {
+    .button_file {
+        min-width: 204px;
+        padding-left: 23px;
+        padding-right: 23px;
+        height: 45px;
+        font-size: 18px;
+        font-weight: 500;
+        background-color: $red;
+        color: $white;
+        border: none;
+        outline: none;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        user-select: none;
+
+        > input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            z-index: 2;
+            cursor: pointer;
+        }
+
+        label.error {
+            color: #F00;
+            position: absolute;
+            white-space: nowrap;
+            left: calc(100% + 10px);
+            font-size: 14px;
+            text-align: left;
+            display: inline-block !important;
+        }
+    }
+
+    @media only screen and (max-width:1280px) {
+        .button_file {
+            min-width: 136px;
+            height: 40px;
+            font-size: 14px;
+        }
+    }
+
+
+    @media only screen and (max-width:800px) {
+        .button_file {
+            min-width: 106px;
+            height: 30px;
+            font-size: 10px;
+        }
+    }
+}
+
+@import 'popup';

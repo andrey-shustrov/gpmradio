@@ -1,0 +1,128 @@
+    <div class="popup">
+        <div>
+            <div>
+                <div class="popup__box">
+                    <span class="popup__box_close popup_but"><i></i></span>
+                    <h2>Подать заявку</h2>
+                    <form id="form">
+                        <div class="popup__form">
+                            <p>Ваше имя и фамилия</p>
+                            <div>
+                                <input 
+                                    name="name" 
+                                    type="text" 
+                                    value="" 
+                                    placeholder=" " 
+                                    required 
+                                    tabindex="1" 
+                                />
+                                <p>Андрей</p>
+                            </div>
+                        </div>
+                        <div class="popup__form">
+                            <p>Город</p>
+                            <div>
+                                <input 
+                                    name="sity" 
+                                    type="text" 
+                                    value="" 
+                                    placeholder=" " 
+                                    required 
+                                    tabindex="2"
+                                />
+                                <p>Москва</p>
+                            </div>
+                        </div>
+                        <div class="popup__form_duo">
+                            <div class="popup__form">
+                                <p>Телефон</p>
+                                <div>
+                                    <input 
+                                        name="phone"
+                                        type="tel" 
+                                        pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" 
+                                        minlength="18" 
+                                        maxlength="18" 
+                                        value="" 
+                                        placeholder=" " 
+                                        required 
+                                        tabindex="3"
+                                    />
+                                    <p>+7 (123) 123-12-12</p>
+                                </div>
+                            </div>
+                            <div class="popup__form">
+                                <p>Email</p>
+                                <div>
+                                    <input 
+                                        name="email" 
+                                        type="email" 
+                                        value="" 
+                                        placeholder=" " 
+                                        required 
+                                        tabindex="4"
+                                    />
+                                    <p>andrey@lonwan.ru</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup__form">
+                            <p>Имя и фамилия родственника</p>
+                            <div>
+                                <input 
+                                    name="name2" 
+                                    type="text" 
+                                    value="" 
+                                    placeholder=" " 
+                                    required 
+                                    tabindex="5"
+                                />
+                                <p>Смирнов</p>
+                            </div>
+                        </div>
+                        <div class="popup__form">
+                            <p>Кем вы приходитесь (внук, племянница и тд)</p>
+                            <div>
+                                <input 
+                                    name="name3" 
+                                    type="text" 
+                                    value="" 
+                                    placeholder=" " 
+                                    required 
+                                    tabindex="6"
+                                />
+                                <p>Внук</p>
+                            </div>
+                        </div>
+                        <div class="popup__form_file">
+                            <div>
+                                <button class="button_file">
+                                    Прикрепить фото
+                                    <input 
+                                        name="photo" 
+                                        class="file" 
+                                        type="file" 
+                                        value="Прикрепить фото" 
+                                        required 
+                                    />
+                                </button>
+                                <div class="file_name"></div>
+                            </div>
+                        </div>
+                        <div class="popup__form">
+                            <p><span>до 3500 символов</span>Напишите историю</p>
+                            <div>
+                                <textarea 
+                                    name="text" 
+                                    placeholder=" " 
+                                    required
+                                    tabindex="7"
+                                ></textarea>
+                            </div>
+                        </div>
+                        <button class="button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

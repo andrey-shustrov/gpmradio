@@ -1,0 +1,31 @@
+footer {
+    min-height: 711px;
+    background-color: #FFF;
+    background-image: url('../img/c_bg.png');
+    background-position: bottom center;
+
+    position: relative;
+
+    div {
+        padding-top: 650px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: $black;
+
+        @media only screen and (max-width:550px) {
+            font-size: 12px;
+        }
+
+        a {
+            text-decoration: underline;
+            color: $black;
+
+            &:hover {
+                text-decoration: none;
+                color: $black;
+            }
+        }
+    }
+}
